@@ -1,0 +1,20 @@
+h1 {
+    color: rgb(47, 14, 14);
+}
+form {
+    width: 50%;
+    margin: auto;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 4px;
+}
+button {
+    margin: 7px;
+    width: 80px;
+}
+.alert {
+    color: red;
+}
