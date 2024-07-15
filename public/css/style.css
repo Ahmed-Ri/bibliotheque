@@ -1,9 +1,23 @@
 h1 {
-    color: rgb(47, 14, 14);
+    color: rgb(163, 17, 17);
+    text-align: center;
 }
 form {
     width: 50%;
     margin: auto;
+    margin-top: 200px;
+    
+}
+input{
+    box-shadow: 2px 2px;
+}
+button{
+    background-color: rgb(39, 39, 118);
+    color: aliceblue;
+}
+label{
+    color: aliceblue;
+    margin-top: 10px;
 }
 
 div {
@@ -17,4 +31,21 @@ button {
 }
 .alert {
     color: red;
+}
+table {
+    width: 50%;
+    margin: auto;
+}
+.aa {
+    text-align: center;
+    
+}
+a{
+    color: rgb(239, 239, 247);
+}
+td {
+    text-align: center;
+}
+body {
+    background: url("https://blog.sospc95.fr/wp-content/uploads/2019/05/retrouver-image-fond-ecran-windows.jpg");
 }

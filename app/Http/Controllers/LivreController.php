@@ -25,7 +25,7 @@ class LivreController extends Controller
             $data = $request->validate([
                 'title' => 'required|max:255',
                 'author' => 'required|max:255',
-                'isbn' => ['required', 'unique:books', new IsValidISBN()],
+                'isbn' => ['required'],
                 'published_date' => 'required|date'
             ]);
 

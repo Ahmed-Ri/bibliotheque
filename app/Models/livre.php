@@ -8,11 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class livre extends Model
 {
     use HasFactory;
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    
     protected $fillable = [
         'title',
         'author',

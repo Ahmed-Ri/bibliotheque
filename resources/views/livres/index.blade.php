@@ -44,7 +44,9 @@
         </tbody>
     </table>
 
+    <div class="aa">
     <a href="{{ route('livres.create') }}">Ajouter un nouveau Livre</a>
+    </div>
     @if (session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
