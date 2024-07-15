@@ -27,11 +27,14 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Configurer Apache
-RUN echo '<Directory /var/www/html>' > /etc/apache2/sites-available/000-default.conf \
-    && echo '    Options Indexes FollowSymLinks' >> /etc/apache2/sites-available/000-default.conf \
-    && echo '    AllowOverride All' >> /etc/apache2/sites-available/000-default.conf \
-    && echo '    Require all granted' >> /etc/apache2/sites-available/000-default.conf \
-    && echo '</Directory>' >> /etc/apache2/sites-available/000-default.conf
+RUN echo '<VirtualHost *:80>' > /etc/apache2/sites-available/000-default.conf \
+    && echo '    DocumentRoot /var/www/html/public' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '    <Directory /var/www/html/public>' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '        Options Indexes FollowSymLinks' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '        AllowOverride All' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '        Require all granted' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '    </Directory>' >> /etc/apache2/sites-available/000-default.conf \
+    && echo '</VirtualHost>' >> /etc/apache2/sites-available/000-default.conf
 
 # Exposer le port 80
 EXPOSE 80
